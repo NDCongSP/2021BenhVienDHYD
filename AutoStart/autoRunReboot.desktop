@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=RebootAuto
+Comment= Chay root desktop
+Exec= lxterminal --command "sudo mono /root/HenGioRestart/hengioRestart.exe"
+Icon=/usr/share/pixmaps/dillo.xpm
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;

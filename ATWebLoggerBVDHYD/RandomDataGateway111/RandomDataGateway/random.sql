@@ -1,0 +1,3 @@
+use gateway;
+INSERT INTO b827eb593e42_data (DateTimeData, Location_1,Low_Level_1,High_Level_1, Location_2,Low_Level_2,High_Level_2, Location_3,Low_Level_3,High_Level_3,Location_4,Low_Level_4,High_Level_4)
+VALUES (now(),round(RAND() * (-18 - -23 + 1) + -23,1), -25,10, round(RAND() * (88 - 70 + 1) + 70,1), 0,90,round(RAND() * (-18 - -23 + 1) + -23,1), -25,10,round(RAND() * (88 - 70 + 1) + 70,1), 0,90);

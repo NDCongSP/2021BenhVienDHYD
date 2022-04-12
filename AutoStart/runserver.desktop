@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=runserver
+Comment= Chay root desktop
+Exec=lxterminal --command "sudo xsp4 --port 80"
+Icon=/usr/share/pixmaps/dillo.xpm
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;

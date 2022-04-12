@@ -1,0 +1,1 @@
+MacAdd:test|Port:COM2|Baudrate:9600|DataBit:8|Parity:0|Stopbit:1|TimeOut:1000

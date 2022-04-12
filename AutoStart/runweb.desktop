@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name= runweb
+Comment= Chay root desktop
+Exec=sudo sh /home/pi/chaytrangweb.sh
+Icon=/usr/share/pixmaps/dillo.xpm
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;

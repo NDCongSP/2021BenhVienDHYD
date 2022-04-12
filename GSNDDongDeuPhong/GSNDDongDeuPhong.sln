@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSNDDongDeuPhong", "GSNDDongDeuPhong\GSNDDongDeuPhong.csproj", "{289B8760-4A49-4ECD-B4CC-B892CD321337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "randomdata", "randomdata\randomdata.csproj", "{16CEED4B-3A57-4201-9175-9537FF3E4CA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{289B8760-4A49-4ECD-B4CC-B892CD321337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289B8760-4A49-4ECD-B4CC-B892CD321337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289B8760-4A49-4ECD-B4CC-B892CD321337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289B8760-4A49-4ECD-B4CC-B892CD321337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16CEED4B-3A57-4201-9175-9537FF3E4CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CEED4B-3A57-4201-9175-9537FF3E4CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CEED4B-3A57-4201-9175-9537FF3E4CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CEED4B-3A57-4201-9175-9537FF3E4CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

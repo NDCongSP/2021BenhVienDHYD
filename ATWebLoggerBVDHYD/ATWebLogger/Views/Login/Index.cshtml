@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+
+@model UserAccount
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - PT Web/Logger</title>
+    <!-- add icon link -->
+    <link rel="icon" href="~/Images/LogoIco.ico"
+          type="image/x-icon">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Assets/dist/css/adminlte.min.css">
+
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <img src="~/Images/Logo.png" height="300" width="300"/>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg text-bold text-md">LOGGER GATEWAY</p>
+                @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="input-group mb-3">
+                        @Html.TextBoxFor(model => model.Username, new { @class = "form-control", @placeholder = "Username", @type = "text", @autofocus = "autofocus" })
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password", @type = "password", @autofocus = "autofocus" })
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- /.col -->
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
+                        @Html.ValidationSummary(true, null, new { @class = "alert alert-danger col", @style="margin-top: 10px;" })
+                    </div>
+                }
+
+                <div class="social-auth-links text-center mb-3">
+                    <strong>Copyright &copy; 2020 <a href="http://phucthinhauto.com"> PHUC THINH CO.,LTD. All rights reserved.</a></strong>
+                </div>
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+    <!-- /.login-box -->
+    <!-- jQuery -->
+    <script src="~/Assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Assets/dist/js/adminlte.min.js"></script>
+</body>
+</html>

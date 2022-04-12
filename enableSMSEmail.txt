@@ -1,0 +1,1 @@
+True,True,Databases,60,user id=root;password=100100;database=gateway;server=localhost;convertzerodatetime=True;port=3306

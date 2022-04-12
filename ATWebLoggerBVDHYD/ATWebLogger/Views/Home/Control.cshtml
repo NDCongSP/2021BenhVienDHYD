@@ -1,0 +1,205 @@
+﻿
+@{
+    ViewBag.Title = "Control";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Control Panel</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid body-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <!--card-->
+                    <div class="card card-navy card-tabs">
+                        <div class="card-header p-0 pt-1">
+                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="false">Holding</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="true">Coils</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">AT-TMS3.1</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="custom-tabs-one-tabContent">
+                                <div class="tab-pane fade" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="deviceIdHolding">Device Id</label>
+                                            <input type="number" min="0" max="255" value="1" class="form-control" id="deviceIdHolding" placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-md-4">
+                                            <label for="addressHolding">Memory address</label>
+                                            <input type="number" min="1" value="30001" class="form-control" id="addressHolding" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="dataTypeHolding">DataType</label>
+                                            <select id="dataTypeHolding" class="form-control select2bs4 select2">
+                                                <option value="Word">Word</option>
+                                                <option value="DWord">DWord</option>
+                                                <option value="Short">Short</option>
+                                                <option value="Int">Int</option>
+                                                <option value="Float">Float</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="valueHolding">Value</label>
+                                            <input type="number" value="1" class="form-control" id="valueHolding" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnReadHolding">&nbsp;</label>
+                                            <button id="btnReadHolding" class="btn btn-green bg-gradient-green form-control">Read</button>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnWriteHolding">&nbsp;</label>
+                                            <button id="btnWriteHolding" class="btn btn-primary bg-gradient-blue form-control">Write</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade active show" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="deviceIdCoil">Device Id</label>
+                                            <input type="number" min="0" max="255" value="1" class="form-control" id="deviceIdCoil" placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-md-4">
+                                            <label for="addressCoil">Memory address</label>
+                                            <input type="number" min="1" value="1" class="form-control" id="addressCoil" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="dataTypeCoil">DataType</label>
+                                            <select id="dataTypeCoil" class="form-control select2bs4 select2">
+                                                <option value="Bool">Bool</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="valueCoil">Value</label>
+                                            <select id="valueCoil" class="form-control select2bs4 select2">
+                                                <option value="1">True - 1</option>
+                                                <option value="0">False - 0</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnReadCoil">&nbsp;</label>
+                                            <button id="btnReadCoil" class="btn btn-green bg-gradient-green form-control">Read</button>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnWriteCoil">&nbsp;</label>
+                                            <button type="submit" id="btnWriteCoil" class="btn btn-primary bg-gradient-blue form-control">Write</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="deviceIdATMS">Device Id</label>
+                                            <input type="number" min="0" max="255" value="1" class="form-control" id="deviceIdATMS" placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-md-4">
+                                            <label for="deadbandATMS">Deadband</label>
+                                            <input type="number" class="form-control" id="deadbandATMS" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="temphighATMS">Temp High</label>
+                                            <input type="number" class="form-control" id="temphighATMS" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="templowATMS">Temp Low</label>
+                                            <input type="number" class="form-control" id="templowATMS" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="offsetATMS">Offset</label>
+                                            <input type="number" class="form-control" id="offsetATMS" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="btnReadATMS">&nbsp;</label>
+                                            <button id="btnReadATMS" class="btn btn-green bg-gradient-green form-control">Read</button>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnWriteATMS">&nbsp;</label>
+                                            <button id="btnWriteATMS" class="btn btn-primary bg-gradient-blue form-control">Write</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col">
+                    <div class="card card-navy">
+                        <div class="card-header ">
+                            <h3 class="card-title">Logging</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive">
+                            <table id="logTable" class="table table-hover table-bordered projects">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>DateTime</th>
+                                        <th>Action</th>
+                                        <th>Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="logTableBody"></tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+@section scripts
+{
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/Assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/Assets/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="~/Assets/datatables.min.css" />
+    <script src="~/Assets/datatables.min.js"></script>
+
+    <!-- Select2 -->
+    <script src="~/Assets/plugins/select2/js/select2.full.min.js"></script>
+    <script src="~/Scripts/InitializeSelect2.js"></script>
+    <!-- Toastr -->
+    <script src="~/Assets/plugins/toastr/toastr.min.js"></script>
+
+    <script src="~/Scripts/control.js"></script>
+
+}
