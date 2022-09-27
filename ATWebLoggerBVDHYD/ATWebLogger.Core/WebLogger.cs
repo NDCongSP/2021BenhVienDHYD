@@ -68,7 +68,6 @@ namespace ATWebLogger.Core
         public Locations Locations { get; set; }
         public Alarms Alarms { get; set; }
 
-        //public string PathFile = $"D:\\ATPro\\CodeProject\\GatewayPi\\WeblogMVC\\SourceCode\\";
         //public string PathFile = @"C:\GatewayParametters\";
         public string PathFile = $"/home/pi/";
 
@@ -1297,7 +1296,8 @@ namespace ATWebLogger.Core
             try
             {
                 GateWay.Email.CredentialEmail = "giamsat.canhbao@gmail.com";
-                GateWay.Email.CredentialPass = "1@3$5^7*";
+                GateWay.Email.CredentialPass = "ujgknqghwcjqxfvq";
+                GateWay.Email.Port = 587;
 
                 if (location.Name.Contains("KDNT") == false)
                 {
@@ -1319,10 +1319,18 @@ namespace ATWebLogger.Core
                     $". {Environment.NewLine}High Level: {(location.HighLevel.HasValue ? location.HighLevel.Value.ToString() : "")}.";
                 Debug.WriteLine($"EMAIL {strAlarm}");
                 GateWay.Email.bodyEmail = strAlarm;
-                GateWay.Email.TimeOut = 2000;
+                
                 GateWay.Email.SendEmail();
-                Thread.Sleep(10);
-                Console.WriteLine($"Gui Email");
+
+                if (GateWay.Email.Error == false)
+                {
+                    Console.WriteLine($"Gui Email Good");
+                }
+                else
+                {
+                    Console.WriteLine($"Gui Email Fail");
+                }
+
             }
             catch (Exception ex)
             {
