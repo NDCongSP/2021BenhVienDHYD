@@ -68,11 +68,10 @@ namespace ATWebLogger.Core
         public Locations Locations { get; set; }
         public Alarms Alarms { get; set; }
 
-        //public string PathFile = @"C:\GatewayParametters\";
-        public string PathFile = $"/home/pi/";
+        public string PathFile = @"C:\GatewayParametters\";
+        //public string PathFile = $"/home/pi/";
 
         public double VotLo = 5;
-
         #endregion
 
         #region Private members
