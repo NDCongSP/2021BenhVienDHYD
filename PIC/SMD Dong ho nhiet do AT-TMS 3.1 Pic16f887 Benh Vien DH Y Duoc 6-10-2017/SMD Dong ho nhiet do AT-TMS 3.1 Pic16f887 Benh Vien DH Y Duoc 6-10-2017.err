@@ -1,0 +1,9 @@
+Compiling D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017 on 05-Jan-23 at 14:56
+>>> Warning 216 "D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c" Line 619(1,2): Interrupts disabled during call to prevent re-entrancy:  (modbus_calc_crc)
+>>> Warning 202 "D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c" Line 15(17,31): Variable never used:   Delay_ReadTemp
+>>> Warning 202 "D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\modbus_slave.c" Line 32(10,19): Variable never used:   big_coils
+>>> Warning 202 "D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\modbus_slave.c" Line 33(10,26): Variable never used:   coil_data_reciev
+>>> Warning 202 "D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\modbus_slave.c" Line 34(10,20): Variable never used:   big_inputs
+      Memory usage:   ROM=97%      RAM=52% - 59%
+      0 Errors,  5 Warnings.
+Build Successful.

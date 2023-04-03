@@ -33,13 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PLCPi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Others\dllPLCPi\PLCPi.dll</HintPath>
+    <Reference Include="PLCPi">
+      <HintPath>..\..\dllPLCPi\PLCPi.dll</HintPath>
     </Reference>
-    <Reference Include="snap7.net, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Others\dllPLCPi\snap7.net.dll</HintPath>
+    <Reference Include="snap7.net">
+      <HintPath>..\..\dllPLCPi\snap7.net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -1,0 +1,100 @@
+
+ROM used:   7967/8192 (97%)
+            8112/8192 (99%) including unused fragments
+
+            2.2 Average locations per line
+            9.5 Average locations per statement
+
+RAM used:   191/368 (52%) at main() level
+            216/368 (59%) worst case
+
+Stack used: 8 worst case (5 in main + 3 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  620   408  49  SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c
+  810     0   0  C:\Program Files (x86)\PICC\Devices\16f887.h
+   98    19   2  modbus_slave.c
+ 1850   233  28  MODBUS_LIBRARY.c
+  214   137  16  Ds18d20.c
+   40    16   2  Sev_Seg_Display.c
+   58    22   3  export_595.c
+----- -----
+ 3690   835 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   0    1             @delay_ms1
+0     17   0    1             @delay_us1
+0     11   0    0             @GETCH_BIU_1
+0    263   3    0             @const787
+0    263   3    0             @const790
+0     15   0    0    188  2.7  RCV_ON
+0     20   0    0    130  2.3  modbus_init
+0     16   0    1    121  2.2  modbus_enable_timeout
+0     31   0    0    254  5.0  modbus_timeout_now
+0     18   0    2    256  3.7  modbus_calc_crc
+1     24   0    1    125  2.6  modbus_serial_putc
+0     72   1    3    749  6.3  incomming_modbus_serial
+1     35   0    3    274  4.3  modbus_serial_send_start
+1     46   1    3    432  5.7  modbus_serial_send_stop
+1     20   0    0    225  5.4  modbus_kbhit
+ Inline         8    328  5.0  modbus_read_holding_registers_rsp
+ Inline         8    328  5.0  modbus_read_input_registers_rsp
+ Inline         6    253  1.9  modbus_write_multiple_registers_rsp
+1     19   0    6    108  2.2  modbus_exception_rsp
+ Inline         8   2035 12.2  modbus_process
+0     53   1    2    212  3.6  init_1wire
+0     43   1    2    284  4.6  read_1wire
+0     50   1    2    338  5.8  write_1wire
+1   1507  19    4   5826 11.4  Get_temp
+0     31   0    2             @ITOF
+0    204   3   14             @DIVFF
+0    119   1   13             @MULFF
+0    326   4   16             @ADDFF
+0     65   1   10             @FLT
+0     33   0    4             @SFTOI
+0     23   0    3             @DIV88
+0     39   0    5             @DIV1616
+0     47   1    3     96  2.1  port_init
+0     34   0    6             @WRITEBITA
+0     92   1    5    400  7.0  send_byte
+ Inline         3     86  2.1  load_store_reg
+0     29   0    0             @const981
+1    138   2   14    817  7.8  display
+3    807  10    1   2046  6.4  MAIN
+2    567   7    3   2441  8.6  Doc_eeprom
+0     39   0    2             @MUL88
+2    482   6    4   2144  7.9  Alarm_Control
+1     39   0    2             @SITOF
+1     27   0    2    333  3.7  Nutnhan
+3   1161  15    2   6171 10.5  CaiDat
+1     39   0    4             @DIVS88
+2    878  11    1   2169  6.6  Ghi_eeprom
+1    147   2    0    965  5.8  Apply_Changes
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               30
+    Statements              835
+    Comments                688
+    Volume (V)              47892
+    Difficulty (D)          163.3
+    Effort to implement (E) 7822220
+    Time to implement (T)   120 hours, 43 minutes
+    Est Delivered Bugs (B)  13
+    Cyclomatic Complexity   125
+    Maintainability (MI)    123
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00039    54  0  
+0003A-007FF  1973  17  
+00800-00FFF  2041  7  
+01000-017FF  1927  121  
+01800-01FFF  1968  80  
+
+
+

@@ -64,6 +64,7 @@ namespace ATWebLogger.Controllers
                 {
                     item.Id,
                     item.Value,
+                    item.ValueOld,
                     item.Status,
                     item.IsHighAlarm,
                     item.IsLowAlarm

@@ -25,7 +25,7 @@ function loadLocations() {
                     html += '<div class="row">';
 
                     html += '<div class="col">';
-                    html += '<span class="text-lg">Value: </span><span id="' + valueId + '" class="text-lg text-success">' + item.Value + '</span>'
+                    html += '<span class="text-lg">Value: </span><span id="' + valueId + '" class="text-lg text-success">' + item.ValueOld + '</span>'
                     html += '</div>';
 
                     html += '<div class="col">';
@@ -88,7 +88,7 @@ function refresh() {
                         value.removeClass('text-success');
                         value.addClass('text-danger');
                     }
-                    value.html(item.Value);
+                    value.html(item.ValueOld);
                 }
             });
             setTimeout(refresh, 500);

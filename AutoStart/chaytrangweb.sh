@@ -1,2 +1,2 @@
 sleep 10s;
-epiphany-browser http://localhost/Data
+epiphany-browser http://localhost/Data/Index

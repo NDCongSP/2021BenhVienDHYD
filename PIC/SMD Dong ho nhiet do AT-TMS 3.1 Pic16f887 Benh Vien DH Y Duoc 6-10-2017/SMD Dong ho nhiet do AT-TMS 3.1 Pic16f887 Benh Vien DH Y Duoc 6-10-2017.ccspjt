@@ -1,0 +1,91 @@
+[Directories]
+Include=<default>;\
+Library=
+LinkerScript=
+output=
+[defines]
+enabled=0
+D1=
+V1=
+chip=1
+buildcount=6
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+expandtree=0
+[PROJECT]
+Target=SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.hex
+Development_Mode=
+Processor=0x887F
+Processor_Text=PIC16F887
+ToolSuite=CCS
+CCSVersion=5.109
+Compiler=PCM
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c
+[SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c
+2=C:\Program Files (x86)\PICC\Devices\16f887.h
+3=modbus_slave.c
+4=MODBUS_LIBRARY.c
+5=Ds18d20.c
+6=Sev_Seg_Display.c
+7=export_595.c
+8=
+t1=1
+Count=7
+t2=1
+t3=1
+t4=1
+t5=1
+t6=1
+t7=1
+
+[ProjectLog]
+Days=2
+D1=05-01-2023
+D1_L=6
+D1_L1=[52965]Project Opened.
+D1_L2=[53070]Started Editing.
+D1_L3=[53315]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L4=[53315]Project Closed.
+D1_L5=[53503]Project Opened.
+D1_L6=[54008]Project Closed.
+D2=09-01-2023
+D2_L=1
+D2_L1=[53615]Project Opened.
+
+[CompilerVersion]
+Fixed=
+[Units]
+Count=1
+1=SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017 (main)

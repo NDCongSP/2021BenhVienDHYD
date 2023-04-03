@@ -1,0 +1,314 @@
+ÀÄ8
+   ÃÄMAIN  3/807  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄport_init  0/47  Ram=3
+   ³  ³  ÃÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ÃÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ÀÄ@WRITEBITA  0/34  Ram=6
+   ³  ÃÄGet_temp  1/1507  Ram=4
+   ³  ³  ÃÄinit_1wire  0/53  Ram=2
+   ³  ³  ³  ÃÄ@delay_us1  0/17  Ram=1
+   ³  ³  ³  ÀÄ@delay_us1  0/17  Ram=1
+   ³  ³  ÃÄwrite_1wire  0/50  Ram=2
+   ³  ³  ÃÄwrite_1wire  0/50  Ram=2
+   ³  ³  ÃÄinit_1wire  0/53  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄwrite_1wire  0/50  Ram=2
+   ³  ³  ÃÄwrite_1wire  0/50  Ram=2
+   ³  ³  ÃÄread_1wire  0/43  Ram=2
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@ADDFF  0/326  Ram=16
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@ADDFF  0/326  Ram=16
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÀÄ@FLT  0/65  Ram=10
+   ³  ÃÄdisplay  1/138  Ram=14
+   ³  ³  ÃÄ@const981  0/29  Ram=0
+   ³  ³  ÃÄsend_byte  0/92  Ram=5
+   ³  ³  ³  ÃÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ³  ÃÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ³  ÃÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ³  ÀÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ÃÄload_store_reg  (Inline)  Ram=3
+   ³  ³  ³  ÃÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ³  ÀÄ@WRITEBITA  0/34  Ram=6
+   ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄdisplay  1/138  Ram=14
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄGet_temp  1/1507  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄmodbus_init  0/20  Ram=0
+   ³  ³  ÀÄRCV_ON  0/15  Ram=0
+   ³  ³     ÀÄ@GETCH_BIU_1  0/11  Ram=0
+   ³  ÃÄDoc_eeprom  2/567  Ram=3
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÀÄ@SFTOI  0/33  Ram=4
+   ³  ÃÄmodbus_kbhit  1/20  Ram=0
+   ³  ÃÄmodbus_process  (Inline)  Ram=8
+   ³  ³  ÃÄmodbus_exception_rsp  1/19  Ram=6
+   ³  ³  ³  ÃÄmodbus_serial_send_start  1/35  Ram=3
+   ³  ³  ³  ³  ÃÄ@delay_us1  0/17  Ram=1
+   ³  ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ³  ÀÄmodbus_calc_crc  0/18  Ram=2
+   ³  ³  ³  ³  ³     ÃÄ@const787  0/263  Ram=0
+   ³  ³  ³  ³  ³     ÀÄ@const790  0/263  Ram=0
+   ³  ³  ³  ³  ÀÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄmodbus_serial_send_stop  1/46  Ram=3
+   ³  ³  ³     ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄ@delay_us1  0/17  Ram=1
+   ³  ³  ³     ÀÄRCV_ON  0/15  Ram=0
+   ³  ³  ³        ÀÄ*
+   ³  ³  ÃÄmodbus_read_holding_registers_rsp  (Inline)  Ram=8
+   ³  ³  ³  ÃÄmodbus_serial_send_start  1/35  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄmodbus_serial_send_stop  1/46  Ram=3
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄmodbus_read_input_registers_rsp  (Inline)  Ram=8
+   ³  ³  ³  ÃÄmodbus_serial_send_start  1/35  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄmodbus_serial_send_stop  1/46  Ram=3
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄmodbus_exception_rsp  1/19  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmodbus_write_multiple_registers_rsp  (Inline)  Ram=6
+   ³  ³  ³  ÃÄmodbus_serial_send_start  1/35  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmodbus_serial_putc  1/24  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄmodbus_serial_send_stop  1/46  Ram=3
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÀÄmodbus_exception_rsp  1/19  Ram=6
+   ³  ³     ÀÄ*
+   ³  ÃÄApply_Changes  1/147  Ram=0
+   ³  ³  ÃÄ@SITOF  1/39  Ram=2
+   ³  ³  ÀÄ@SITOF  1/39  Ram=2
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄGet_temp  1/1507  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄdisplay  1/138  Ram=14
+   ³  ³  ÀÄ*
+   ³  ÃÄAlarm_Control  2/482  Ram=4
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SITOF  1/39  Ram=2
+   ³  ³  ÃÄ@ADDFF  0/326  Ram=16
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SITOF  1/39  Ram=2
+   ³  ³  ÃÄ@ADDFF  0/326  Ram=16
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SITOF  1/39  Ram=2
+   ³  ³  ÃÄ@ADDFF  0/326  Ram=16
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ³  ÃÄ@SITOF  1/39  Ram=2
+   ³  ³  ÃÄ@ADDFF  0/326  Ram=16
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄNutnhan  1/27  Ram=2
+   ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄGhi_eeprom  2/878  Ram=1
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ÃÄ@DIVS88  1/39  Ram=4
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@FLT  0/65  Ram=10
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ÃÄ@MULFF  0/119  Ram=13
+   ³  ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ³  ÀÄ@DIV88  0/23  Ram=3
+   ³  ÀÄCaiDat  3/1161  Ram=2
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@ITOF  0/31  Ram=2
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@MUL88  0/39  Ram=2
+   ³     ÃÄ@DIVS88  1/39  Ram=4
+   ³     ÃÄ@MUL88  0/39  Ram=2
+   ³     ÃÄ@DIVS88  1/39  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@ITOF  0/31  Ram=2
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@MUL88  0/39  Ram=2
+   ³     ÃÄ@DIVS88  1/39  Ram=4
+   ³     ÃÄ@MUL88  0/39  Ram=2
+   ³     ÃÄ@DIVS88  1/39  Ram=4
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@FLT  0/65  Ram=10
+   ³     ÃÄ@MULFF  0/119  Ram=13
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@MULFF  0/119  Ram=13
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@DIV88  0/23  Ram=3
+   ³     ÃÄdisplay  1/138  Ram=14
+   ³     ³  ÀÄ*
+   ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³     ÃÄ@FLT  0/65  Ram=10
+   ³     ÃÄ@ADDFF  0/326  Ram=16
+   ³     ÃÄ@FLT  0/65  Ram=10
+   ³     ÃÄ@ADDFF  0/326  Ram=16
+   ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³     ÃÄ@FLT  0/65  Ram=10
+   ³     ÃÄ@ADDFF  0/326  Ram=16
+   ³     ÃÄ@FLT  0/65  Ram=10
+   ³     ÃÄ@ADDFF  0/326  Ram=16
+   ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÃÄ@SFTOI  0/33  Ram=4
+   ³     ÀÄdisplay  1/138  Ram=14
+   ³        ÀÄ*
+   ÃÄmodbus_timeout_now  0/31  Ram=0
+   ³  ÀÄmodbus_enable_timeout  0/16  Ram=1
+   ÀÄincomming_modbus_serial  0/72  Ram=3
+      ÃÄ@GETCH_BIU_1  0/11  Ram=0
+      ÃÄmodbus_calc_crc  0/18  Ram=2
+      ³  ÀÄ*
+      ÀÄmodbus_enable_timeout  0/16  Ram=1

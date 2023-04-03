@@ -1,0 +1,358 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     i
+029     m
+02A.0   daucham
+02A.1   Modbus_update
+02A.2   Ghi_Rom
+02A.3   Old_Mode
+02A.4   Old_Alarm
+02A.5   alarmACK
+02A.6   Count_ReadTemp
+02A.7   Led_Alarm
+02B-02D control_array
+02E     canhbao
+02F     set_count
+030     Config
+031-034 Temp_offset
+035-038 deadband
+039     high_temp
+03A     low_temp
+03B     nhapnhay
+03C     Delay_ReadTemp
+03D-040 main_array
+041-044 temp_array
+045     alarmbit
+046     rs232_errors
+047.0   modbus_serial_new
+047.1   read_ok
+047.2   minus
+048     modbus_serial_state
+049-04A modbus_serial_crc
+04B     @TRIS_C
+04C-059 big_hold_regs
+05A     regis_num
+05B-05E big_coils
+05F-062 coil_data_reciev
+063-066 big_inputs
+067-06E buffer
+06F-072 temp
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+098     TXSTA
+098.1   TRMT
+0A0-0E3 modbus_rx
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+110-131 big_input_regs
+132-135 @MULFF.P1
+132     modbus_process.i
+132-135 @SFTOI.P1
+132-133 @ITOF.P2
+132-133 port_init.my_array_port
+132     write_1wire.data
+132     init_1wire.a
+132-133 display.mydisplay_data
+132     Get_temp.@SCRATCH1
+132     MAIN.@SCRATCH1
+132     Doc_eeprom.@SCRATCH1
+132     Alarm_Control.@SCRATCH1
+132     Nutnhan.@SCRATCH1
+132     CaiDat.@SCRATCH1
+132     Ghi_eeprom.@SCRATCH1
+133     @DIVS88.P1
+133     write_1wire.a
+133     modbus_process.j
+133     @MUL88.P1
+133     @DIV88.P2
+133     init_1wire.@SCRATCH1
+133     Get_temp.@SCRATCH2
+133     Doc_eeprom.@SCRATCH2
+133     Alarm_Control.@SCRATCH2
+133     Nutnhan.@SCRATCH2
+133     CaiDat.@SCRATCH2
+134     @MUL88.P1
+134     @DIV88.P2
+134     modbus_exception_rsp.address
+134     @DIVS88.P1
+134     read_1wire.a
+134-135 @DIV1616.P1
+134     display.mysev_num
+134     modbus_process.@SCRATCH1
+134     Get_temp.@SCRATCH3
+134     port_init.@SCRATCH1
+134     Doc_eeprom.@SCRATCH3
+134     Alarm_Control.@SCRATCH3
+135     read_1wire.data
+135-136 modbus_exception_rsp.func
+135-136 display.myport
+135     modbus_process.@SCRATCH2
+135     Get_temp.@SCRATCH4
+135     @DIV88.@SCRATCH1
+135     Alarm_Control.@SCRATCH4
+135     @DIVS88.@SCRATCH1
+136-137 @SITOF.P1
+136-139 @MULFF.P2
+136-137 @DIV1616.P3
+136-139 @FLT.P4
+136-139 @DIVFF.P5
+136-139 @ADDFF.P6
+136     modbus_process.@SCRATCH3
+136     @DIVS88.@SCRATCH2
+137-13A display.display_buffer
+137     modbus_read_holding_registers_rsp.address
+137     modbus_exception_rsp.error
+137     modbus_read_input_registers_rsp.address
+137     modbus_process.@SCRATCH4
+138     modbus_read_input_registers_rsp.byte_count
+138     modbus_write_multiple_registers_rsp.address
+138     modbus_read_holding_registers_rsp.byte_count
+138     modbus_exception_rsp.@SCRATCH1
+138     modbus_process.@SCRATCH5
+138     @DIV1616.@SCRATCH1
+139-13A modbus_read_holding_registers_rsp.reg_data
+139-13A modbus_read_input_registers_rsp.input_data
+139-13A modbus_write_multiple_registers_rsp.start_address
+139     modbus_exception_rsp.@SCRATCH2
+139     modbus_process.@SCRATCH6
+13A-13D @FLT.P1
+13A-13D @ADDFF.P2
+13A-13D @DIVFF.P3
+13A     @MULFF.@SCRATCH1
+13B     modbus_read_input_registers_rsp.i
+13B     display.i
+13B-13C modbus_write_multiple_registers_rsp.quantity
+13B     modbus_read_holding_registers_rsp.i
+13B     @MULFF.@SCRATCH2
+13C     display.j
+13C     modbus_read_holding_registers_rsp.@SCRATCH1
+13C     modbus_read_input_registers_rsp.@SCRATCH1
+13C     @MULFF.@SCRATCH3
+13D-13E load_store_reg.shift_reg_control_array
+13D     modbus_serial_send_stop.crc_low
+13D     modbus_serial_send_start.to
+13D     modbus_read_holding_registers_rsp.@SCRATCH2
+13D     modbus_read_input_registers_rsp.@SCRATCH2
+13D     modbus_write_multiple_registers_rsp.@SCRATCH1
+13D     @MULFF.@SCRATCH4
+13D     display.@SCRATCH1
+13E     send_byte.data
+13E     modbus_serial_send_start.func
+13E     modbus_serial_send_stop.crc_high
+13E     modbus_read_holding_registers_rsp.@SCRATCH3
+13E     modbus_read_input_registers_rsp.@SCRATCH3
+13E     @DIVFF.@SCRATCH1
+13E     @MULFF.@SCRATCH5
+13E     @ADDFF.@SCRATCH1
+13E     @FLT.@SCRATCH1
+13E     display.@SCRATCH2
+13F     @delay_ms1.P1
+13F     modbus_serial_putc.c
+13F-140 send_byte.shift_reg_control_array
+13F     modbus_serial_send_start.@SCRATCH1
+13F     modbus_serial_send_stop.@SCRATCH1
+13F     @DIVFF.@SCRATCH2
+13F     @ADDFF.@SCRATCH2
+13F     @FLT.@SCRATCH2
+13F     load_store_reg.@SCRATCH1
+13F     display.@SCRATCH3
+140     @delay_us1.P1
+140     @DIVFF.@SCRATCH3
+140     @ADDFF.@SCRATCH3
+141     send_byte.z
+141     @DIVFF.@SCRATCH4
+141     @ADDFF.@SCRATCH4
+142     @DIVFF.@SCRATCH5
+142     @ADDFF.@SCRATCH5
+142     send_byte.@SCRATCH1
+143     @WRITEBITA.P1
+143     @DIVFF.@SCRATCH6
+143     @ADDFF.@SCRATCH6
+144     @WRITEBITA.P1
+144     @ADDFF.@SCRATCH7
+145-146 @WRITEBITA.P1
+145     @ADDFF.@SCRATCH8
+149     incomming_modbus_serial.c
+14A     modbus_calc_crc.data
+14A     modbus_enable_timeout.enable
+14A     incomming_modbus_serial.@SCRATCH1
+14B     modbus_calc_crc.uIndex
+14B     incomming_modbus_serial.@SCRATCH2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+107F     @INTERRUPT_AREA
+10FF     @INTERRUPT_AREA
+117F     @INTERRUPT_AREA
+11FF     @INTERRUPT_AREA
+127F     @INTERRUPT_AREA
+12FF     @INTERRUPT_AREA
+137F     @INTERRUPT_AREA
+13FF     @INTERRUPT_AREA
+147F     @INTERRUPT_AREA
+14FF     @INTERRUPT_AREA
+157F     @INTERRUPT_AREA
+15FF     @INTERRUPT_AREA
+167F     @INTERRUPT_AREA
+16FF     @INTERRUPT_AREA
+177F     @INTERRUPT_AREA
+17FF     @INTERRUPT_AREA
+187F     @INTERRUPT_AREA
+18FF     @INTERRUPT_AREA
+197F     @INTERRUPT_AREA
+19FF     @INTERRUPT_AREA
+1A7F     @INTERRUPT_AREA
+1AFF     @INTERRUPT_AREA
+1B7F     @INTERRUPT_AREA
+1BFF     @INTERRUPT_AREA
+1C7F     @INTERRUPT_AREA
+1CFF     @INTERRUPT_AREA
+1D7F     @INTERRUPT_AREA
+1DFF     @INTERRUPT_AREA
+1E7F     @INTERRUPT_AREA
+1EFF     @INTERRUPT_AREA
+1F7F     @INTERRUPT_AREA
+1FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00003A  modbus_auchCRCHi.call
+000041  modbus_auchCRCHi.data
+000141  modbus_auchCRCLo.call
+000148  modbus_auchCRCLo.data
+000248  sev_seg_map.call
+00024C  sev_seg_map.data
+000265  modbus_enable_timeout
+000275  modbus_timeout_now
+000294  @GETCH_BIU_1
+00029F  modbus_calc_crc
+0002B1  incomming_modbus_serial
+0002F9  @WRITEBITA
+00031B  port_init
+00034A  @delay_us1
+00035B  init_1wire
+000390  write_1wire
+0003C2  read_1wire
+0003ED  @ITOF
+00040C  @DIVFF
+0004D8  @MULFF
+00054F  @ADDFF
+000695  @FLT
+0006D6  @SFTOI
+0006F7  @DIV88
+00070E  @DIV1616
+000735  send_byte
+000791  @delay_ms1
+0007A5  RCV_ON
+0007B4  modbus_init
+0007C8  @MUL88
+000800  Get_temp
+000DE3  display
+000E38  load_store_reg
+000E6D  modbus_kbhit
+000E81  modbus_serial_putc
+000E99  modbus_serial_send_start
+000EBC  modbus_serial_send_stop
+000EEA  modbus_exception_rsp
+000EFD  @SITOF
+000F24  Apply_Changes
+000FB7  Nutnhan
+000FD2  @DIVS88
+001000  Doc_eeprom
+001237  Alarm_Control
+001419  Ghi_eeprom
+001800  CaiDat
+001C89  @cinit1
+001C89  MAIN
+001CDB  @cinit2
+001D95  modbus_process
+001DED  modbus_read_holding_registers_rsp
+001E51  modbus_read_input_registers_rsp
+001F23  modbus_write_multiple_registers_rsp
+
+Project Directory:
+    D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\
+
+Project Files:
+    SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.c [05-Jan-23 14:48  CRC=4915A07B]
+    C:\Program Files (x86)\PICC\Devices\16f887.h            [06-May-22 15:52  CRC=DB832FED]
+    modbus_slave.c                                          [05-Jan-23 14:47  CRC=8D615DF6]
+    MODBUS_LIBRARY.c                                        [19-Jun-12 15:49  CRC=5567F8AF]
+    Ds18d20.c                                               [15-Jun-17 19:01  CRC=89A06C7B]
+    Sev_Seg_Display.c                                       [07-Jun-17 14:34  CRC=622E0CEA]
+    export_595.c                                            [07-Jun-17 11:05  CRC=2A93BCE9]
+
+Source signature=48581A44
+Program memory checksum=0000
+Hex file CRC=35F6
+
+Units:
+    D:\MyCompany\8.SourceCode\3.Projects\2021BenhVienDHYD\PIC\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017\SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.xsym
+    Errors:      SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.err
+    Ext Symbols: SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.esym
+    INHX8:       SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.hex
+    Symbols:     SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.sym
+    List:        SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.lst
+    Debug/COFF:  SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.cof
+    Project:     SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.ccspjt
+    Call Tree:   SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.tre
+    Statistics:  SMD Dong ho nhiet do AT-TMS 3.1 Pic16f887 Benh Vien DH Y Duoc 6-10-2017.STA

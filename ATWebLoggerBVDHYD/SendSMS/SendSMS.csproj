@@ -38,7 +38,7 @@
       <HintPath>C:\Program Files\ATPro\ATSCADA\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PLCPi">
-      <HintPath>..\..\..\Others\dllPLCPi\PLCPi.dll</HintPath>
+      <HintPath>..\..\dllPLCPi\PLCPi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -68,8 +68,8 @@ namespace ATWebLogger.Core
         public Locations Locations { get; set; }
         public Alarms Alarms { get; set; }
 
-        public string PathFile = @"C:\GatewayParametters\";
-        //public string PathFile = $"/home/pi/";
+        //public string PathFile = @"C:\GatewayParametters\";
+        public string PathFile = $"/home/pi/";
 
         public double VotLo = 5;
         #endregion
@@ -208,12 +208,15 @@ namespace ATWebLogger.Core
             Locations.GetAll();
             Console.WriteLine($"Lấy danh sách location thành công: {Locations.Count}");
 
-            Console.WriteLine("Khởi tạo USB3G");
-            GateWay.SMS.Port_USB3G = ReadText(PathFile + "comSMS.txt");
-            //GateWay.SMS.Port_USB3G = "COM12";
-            //GateWay.SMS.Khoitao();
-            Console.WriteLine($"Com SMS {GateWay.SMS.Port_USB3G}| Khoi Tao {GateWay.SMS.Khoitao()}");
-            Console.WriteLine("Khởi tạo USB3G thành công");
+            if (EnableSMSAlarm)
+            {
+                Console.WriteLine("Khởi tạo USB3G");
+                GateWay.SMS.Port_USB3G = ReadText(PathFile + "comSMS.txt");
+                //GateWay.SMS.Port_USB3G = "COM12";
+                //GateWay.SMS.Khoitao();
+                Console.WriteLine($"Com SMS {GateWay.SMS.Port_USB3G}| Khoi Tao {GateWay.SMS.Khoitao()}");
+                Console.WriteLine("Khởi tạo USB3G thành công");
+            }
 
             //GateWay.SMS.GuiSMS(SMSString, "Gui SMS test khi khoi tao");
 
@@ -274,9 +277,10 @@ namespace ATWebLogger.Core
                 DateTime currentTime = DateTime.Now;
                 foreach (var location in Locations)
                 {
-                    if (location.State == "Enable" && location.Status == "Good")
+                    if (location.State == "Enable")// && location.Status == "Good")
                     {
-                        if (double.TryParse(location.Value, out double value))
+                        //if (double.TryParse(location.Value, out double value))
+                        if (double.TryParse(location.ValueOld.ToString(), out double value))
                         {
                             switch (LogType.ToLower())
                             {
@@ -660,6 +664,8 @@ namespace ATWebLogger.Core
                     }
                     Thread.Sleep(500);
                 }
+
+                Thread.Sleep(100);
             }
         }
 
@@ -1318,7 +1324,7 @@ namespace ATWebLogger.Core
                     $". {Environment.NewLine}High Level: {(location.HighLevel.HasValue ? location.HighLevel.Value.ToString() : "")}.";
                 Debug.WriteLine($"EMAIL {strAlarm}");
                 GateWay.Email.bodyEmail = strAlarm;
-                
+
                 GateWay.Email.SendEmail();
 
                 if (GateWay.Email.Error == false)
