@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Report</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid body-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <!--card-->
+                    <div class="card card-navy card-tabs">
+                        <div class="card-header p-0 pt-1">
+                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Alarm</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="custom-tabs-one-tabContent">
+                                <div class="tab-pane fade active show" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label>From date:</label>
+                                            <div class="input-group date" id="fromLocation" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#fromLocation" />
+                                                <div class="input-group-append" data-target="#fromLocation" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>To date:</label>
+                                            <div class="input-group date" id="toLocation" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#toLocation" />
+                                                <div class="input-group-append" data-target="#toLocation" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="selectLocation">Location</label>
+                                            <select id="selectLocation" class="form-control select2bs4 select2"></select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="btnPreviewLocation">&nbsp;</label>
+                                            <button id="btnPreviewLocation" class="btn btn-green bg-gradient-green form-control">Preview</button>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnExportLocation">&nbsp;</label>
+                                            <button id="btnExportLocation" class="btn btn-primary bg-gradient-blue form-control">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label>From date:</label>
+                                            <div class="input-group date" id="fromAlarm" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#fromAlarm" />
+                                                <div class="input-group-append" data-target="#fromAlarm" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>To date:</label>
+                                            <div class="input-group date" id="toAlarm" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#toAlarm" />
+                                                <div class="input-group-append" data-target="#toAlarm" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="selectAlarmType">Alarm type</label>
+                                            <select id="selectAlarmType" class="form-control select2bs4 select2">
+                                                <option value="All">All</option>
+                                                <option value="High Alarm">High Alarm</option>
+                                                <option value="Low Alarm">Low Alarm</option>
+                                                <option value="Normal Alarm">Normal Alarm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="selectLocationAlarm">Location</label>
+                                            <select id="selectLocationAlarm" class="form-control select2bs4 select2"></select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnPreviewAlarm">&nbsp;</label>
+                                            <button id="btnPreviewAlarm" class="btn btn-green bg-gradient-green form-control">Preview</button>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="btnExportAlarm">&nbsp;</label>
+                                            <button id="btnExportAlarm" class="btn btn-primary bg-gradient-blue form-control">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col">
+                    <div class="card card-navy">
+                        <div class="card-header ">
+                            <h3 class="card-title">Preview</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive">
+                            <table id="logTable" class="table projects table-hover" style="width:100%">
+                                <thead>
+                                    <tr id="tbHeader"></tr>
+                                </thead>
+                                <tbody id="tbBody"></tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+@section scripts{
+    <link rel="stylesheet" href="~/Assets/datatables.min.css" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/Assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+
+    @*<script src="~/Assets/plugins/moment/moment.min.js"></script>*@
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+
+    <script src="~/Assets/datatables.min.js"></script>
+    <script src="~/Assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/Assets/plugins/select2/js/select2.full.min.js"></script>
+    <script src="~/Scripts/report.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+}

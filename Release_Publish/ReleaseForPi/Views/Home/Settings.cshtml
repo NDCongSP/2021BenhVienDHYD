@@ -1,0 +1,490 @@
+﻿
+@{
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Settings</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid body-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <!--card-->
+                    <div class="card card-navy card-tabs">
+                        <div class="card-header p-0 pt-1">
+                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="false">Modbus RTU</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Server</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Alarm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-location-tab" data-toggle="pill" href="#custom-tabs-one-location" role="tab" aria-controls="custom-tabs-one-location" aria-selected="true">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-updatePass-tab" data-toggle="pill" href="#custom-tabs-one-updatePass" role="tab" aria-controls="custom-tabs-one-updatePass" aria-selected="false">Change Password</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-reboot-tab" data-toggle="pill" href="#custom-tabs-one-reboot" role="tab" aria-controls="custom-tabs-one-reboot" aria-selected="false">Restart</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="custom-tabs-one-tabContent">
+                                <!--Tab ModbusRTU-->
+                                <div class="tab-pane fade" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                                    <div class="row">
+                                        <!--Select Port-->
+                                        <div class="form-group col-md-6">
+                                            <label for="portName">Port name</label>
+                                            <input type="text" disabled value="/dev/ttyUSB0" class="form-control" id="portName" placeholder="">
+                                        </div>
+                                        <!--Select baudrate-->
+                                        <div class="form-group col-md-6">
+                                            <label for="baudrate">Baudrate</label>
+                                            <select id="baudrate" class="form-control select2bs4 select2">
+                                                <option value="110">110</option>
+                                                <option value="300">300</option>
+                                                <option value="600">600</option>
+                                                <option value="1200">1200</option>
+                                                <option value="2400">2400</option>
+                                                <option value="4800">4800</option>
+                                                <option value="9600">9600</option>
+                                                <option value="14400">14400</option>
+                                                <option value="19200">19200</option>
+                                                <option value="38400">38400</option>
+                                                <option value="57600">57600</option>
+                                                <option value="115200">115200</option>
+                                                <option value="128000">128000</option>
+                                                <option value="256000">256000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Select databits-->
+                                        <div class="form-group col-md-6">
+                                            <label for="databits">Databits</label>
+                                            <select id="databits" class="form-control select2bs4 select2">
+                                                <option value="8">8</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </div>
+                                        <!--Select parity-->
+                                        <div class="form-group col-md-6">
+                                            <label for="parity">Parity</label>
+                                            <select id="parity" class="form-control select2bs4 select2">
+                                                <option value="0">None</option>
+                                                <option value="1">Even</option>
+                                                <option value="2">Odd</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Select stopbits-->
+                                        <div class="form-group col-md-6">
+                                            <label for="stopbits">Stopbits</label>
+                                            <select id="stopbits" class="form-control select2bs4 select2">
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                            </select>
+                                        </div>
+
+                                        <!--Timeout-->
+                                        <div class="form-group col-md-6">
+                                            <label for="timeout">Timeout (ms)</label>
+                                            <input type="number" value="1000" class="form-control" id="timeout" placeholder="">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <!--Button Save ModbusRTU-->
+                                        <div class="form-group col-md-12">
+                                            <label for="btn1">&nbsp;</label>
+                                            <button type="submit" id="btnSaveModbusRTU" class="btn btn-primary bg-gradient-blue form-control">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Tab Server-->
+                                <div class="tab-pane fade active show" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                                    <div class="row">
+                                        <!--ATWebLogger Id-->
+                                        <div class="form-group col-md-6">
+                                            <label for="atWebLogId">AT-Web/Logger Id</label>
+                                            <input disabled type="text" value="" class="form-control" id="atWebLogId" placeholder="">
+                                        </div>
+                                        <!--Server Ip address-->
+                                        <div class="form-group col-md-6">
+                                            <label for="serverIp">Server Ip Address</label>
+                                            <input type="text" class="form-control" id="serverIp" placeholder="" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Log Time Rate-->
+                                        <div class="form-group col-md-6">
+                                            <label for="timeRate">Log Time Rate (s)</label>
+                                            <input type="number" class="form-control" id="timeRate" placeholder="">
+                                        </div>
+
+                                        <!--Log type-->
+                                        <div class="form-group col-md-6">
+                                            <label for="logType">Log Type</label>
+                                            <select id="logType" class="form-control select2bs4 select2">
+                                                <option value="Databases">Databases</option>
+                                                <option value="USB">USB</option>
+                                                <option value="All">All</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <!--Button Save Server-->
+                                        <div class="form-group col-md-12">
+                                            <label for="btn1">&nbsp;</label>
+                                            <button type="submit" id="btnSaveServer" class="btn btn-primary bg-gradient-blue form-control">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Tab Alarm-->
+                                <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                                    <div class="row">
+                                        <!--Check enable alarm by status-->
+                                        <div class="form-group col-md-6 clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="ckbAlarmSms" checked="">
+                                                <label for="ckbAlarmSms">
+                                                    Enable alarm by sms
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6 clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="ckbAlarmEmail" checked="">
+                                                <label for="ckbAlarmEmail">
+                                                    Enable alarm by email
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card card-navy">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Kho chính và kho lẻ</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <!--SMS Number-->
+                                                <div class="form-group col-md-12">
+                                                    <label for="smsNumber">SMS Number</label>
+                                                    <input type="text" class="form-control" id="smsNumber" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!--Email-->
+                                                <div class="form-group col-md-12">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" class="form-control" id="email" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                    <div class="card card-navy">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Kho dược ngoại trú</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <!--SMS Number-->
+                                                <div class="form-group col-md-12">
+                                                    <label for="smsNumberKDNT">SMS Number</label>
+                                                    <input type="text" class="form-control" id="smsNumberKDNT" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!--Email-->
+                                                <div class="form-group col-md-12">
+                                                    <label for="emailKDNT">Email</label>
+                                                    <input type="text" class="form-control" id="emailKDNT" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                    <div class="row">
+                                        <!--Button Save Alarm-->
+                                        <div class="form-group col-md-12">
+                                            <label for="btnSaveAlarm">&nbsp;</label>
+                                            <button type="submit" id="btnSaveAlarm" class="btn btn-primary bg-gradient-blue form-control">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Tab Location-->
+                                <div class="tab-pane fade table-responsive" id="custom-tabs-one-location" role="tabpanel" aria-labelledby="custom-tabs-one-location-tab">
+                                    <table id="tableLocation" class="table table-hover table-bordered projects">
+                                        <thead>
+                                            <tr>
+                                                <th width="50px">
+                                                    #
+                                                </th>
+                                                <th>
+                                                    Name
+                                                </th>
+                                                <th>
+                                                    Device Id
+                                                </th>
+                                                <th>
+                                                    Memory Address
+                                                </th>
+                                                <th>
+                                                    Datatype
+                                                </th>
+                                                <th>
+                                                    Low Level
+                                                </th>
+                                                <th>
+                                                    High Level
+                                                </th>
+                                                <th>
+                                                    Gain
+                                                </th>
+                                                <th>
+                                                    Offset
+                                                </th>
+                                                <th>
+                                                    Deadband
+                                                </th>
+                                                <th>
+                                                    State
+                                                </th>
+                                                <th width="96px" class="text-center">
+                                                    <a class="btn btn-success btn-sm" href="#" onclick="return showAddLocation()">
+                                                        <i class="fas fa-plus">
+                                                        </i>
+                                                    </a>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bodyLocations"></tbody>
+                                    </table>
+                                </div>
+                                <!--Tab Update Password-->
+                                <div class="tab-pane fade table-responsive" id="custom-tabs-one-updatePass" role="tabpanel" aria-labelledby="custom-tabs-one-updatePass-tab">
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <label for="modal-password">Old Password</label>
+                                                    <input type="password" class="form-control" id="modal-password" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <label for="modal-newpassword">New Password</label>
+                                                    <input type="password" class="form-control" id="modal-newpassword" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <label for="modal-comfirmpassword">Comfirm Password</label>
+                                                    <input type="password" class="form-control" id="modal-comfirmpassword" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <button type="button" class="btn btn-primary" id="btnUpdatePassword">Save</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--Tab Restart-->
+                                <div class="tab-pane fade table-responsive" id="custom-tabs-one-reboot" role="tabpanel" aria-labelledby="custom-tabs-one-reboot-tab">
+                                    <div class="col-sm-10">
+                                        <button id="btnReboot" type="button" class="btn btn-danger">Restart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+<div class="modal fade" id="modalLocation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalLocation-label">Add Location</h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <!--Id-->
+                        <div class="form-group col-6">
+                            <label for="modal-id">Id</label>
+                            <input type="text" class="form-control" id="modal-id" disabled="disabled" />
+                        </div>
+                        <!--Location Name-->
+                        <div class="form-group col-6">
+                            <label for="modal-name">Name</label>
+                            <input type="text" class="form-control" id="modal-name" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!--Device Id-->
+                        <div class="form-group col-6">
+                            <label for="modal-deviceId">Device Id</label>
+                            <input type="number" class="form-control" id="modal-deviceId" />
+                        </div>
+                        <!--Memory Address-->
+                        <div class="form-group col-6">
+                            <label for="modal-address">Memory Address</label>
+                            <input type="number" class="form-control" id="modal-address" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Data type-->
+                        <div class="form-group col-6">
+                            <label for="modal-dataType">DataType</label>
+                            <select id="modal-dataType" class="form-control select2bs4 select2">
+                                <option value="Bool">Bool</option>
+                                <option value="Word">Word</option>
+                                <option value="DWord">DWord</option>
+                                <option value="Short">Short</option>
+                                <option value="Int">Int</option>
+                                <option value="Float">Float</option>
+                            </select>
+                        </div>
+                        <!--LowLevel-->
+                        <div class="form-group col-6">
+                            <label for="modal-lowlevel">Low Level</label>
+                            <input type="number" class="form-control" id="modal-lowlevel" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Gain-->
+                        <div class="form-group col-6">
+                            <label for="modal-gain">Gain</label>
+                            <input type="number" class="form-control" id="modal-gain" />
+                        </div>
+                        <!--HighLevel-->
+                        <div class="form-group col-6">
+                            <label for="modal-highlevel">High Level</label>
+                            <input type="number" class="form-control" id="modal-highlevel" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Offset-->
+                        <div class="form-group col-6">
+                            <label for="modal-offset">Offset</label>
+                            <input type="number" class="form-control" id="modal-offset" />
+                        </div>
+                        <!--Deadband-->
+                        <div class="form-group col-6">
+                            <label for="modal-deadband">Deadband</label>
+                            <input type="number" class="form-control" id="modal-deadband" />
+                        </div>
+                    </div>
+                    <!--State-->
+                    <div class="form-group">
+                        <label for="modal-state">State</label>
+                        <select id="modal-state" class="form-control select2bs4 select2">
+                            <option value="Enable">Enable</option>
+                            <option value="Disable">Disable</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAddLocation" onclick="return addLocation();">Add</button>
+                <button type="button" class="btn btn-primary" id="btnUpdateLocation" style="display:none;" onclick="updateLocation();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal question dialog-->
+<div class="modal fade" id="modal-question">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-question-title">Comfirm</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-question-content">Do you want to delete this location ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnYes">Yes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@section scripts
+{
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/Assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/Assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Assets/datatables.min.css" />
+    <script src="~/Assets/datatables.min.js"></script>
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/Assets/plugins/toastr/toastr.min.css">
+
+    <!-- Select2 -->
+    <script src="~/Assets/plugins/select2/js/select2.full.min.js"></script>
+    <script src="~/Scripts/InitializeSelect2.js"></script>
+    <!-- Toastr -->
+    <script src="~/Assets/plugins/toastr/toastr.min.js"></script>
+
+    <script src="~/Scripts/settings.js"></script>
+}

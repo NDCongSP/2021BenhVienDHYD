@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Alarm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Alarm</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid body-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col table-responsive">
+                    <table id="alarmTable" class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>DateTime</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Value</th>
+                                <th>Low Level</th>
+                                <th>High Level</th>
+                                <th class="text-center">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="return AckAlarms()">
+                                        <span>Ack</span>
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="alarmTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+@section scripts
+{
+    <link rel="stylesheet" href="~/Assets/datatables.min.css" />
+    <script src="~/Assets/datatables.min.js"></script>
+    <script src="~/Scripts/alarms.js"></script>
+}
