@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PLCPiProject;
-using MySql.Data.MySqlClient;
 using System.IO;
 using System.Data;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace SendSMS
 {

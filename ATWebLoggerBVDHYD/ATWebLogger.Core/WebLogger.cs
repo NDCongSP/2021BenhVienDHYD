@@ -43,6 +43,7 @@ namespace ATWebLogger.Core
         public string AlarmTableName { get { return MACID + "_alarm"; } }
         public string DataTableName { get { return MACID + "_data"; } }
         public string LocationTableName { get { return MACID + "_location"; } }
+        public string RealtimeTableName { get { return MACID + "_realtime"; } }
         public string ConnectionString
         {
             //get { return $"user id=customer_ttp;password=ThinhTamPhat!@#456&*(;database=gateway;server={ServerIpAddress};convertzerodatetime=True;port=3306"; }
@@ -157,6 +158,7 @@ namespace ATWebLogger.Core
             CoreData.Universal.AlarmTableName = AlarmTableName;
             CoreData.Universal.DataTableName = DataTableName;
             CoreData.Universal.LocationTableName = LocationTableName;
+            CoreData.Universal.RealtimeTableName = RealtimeTableName;
 
             Console.WriteLine("Khởi tạo PLC Pi");
             try
@@ -662,6 +664,10 @@ namespace ATWebLogger.Core
                     {
                         Console.WriteLine($"Lỗi đọc modbus: {ex.Message}");
                     }
+
+                    //Log gia tri len bang realtime
+                    LogRealtime(location);
+
                     Thread.Sleep(500);
                 }
 
@@ -1287,6 +1293,8 @@ namespace ATWebLogger.Core
                         location.Value = "Disable";
                         location.Status = "Disable";
                     }
+
+                    LogRealtime(location);
                 }
                 catch (Exception ex)
                 {
@@ -1860,9 +1868,55 @@ namespace ATWebLogger.Core
             MySqlConnection connection = new MySqlConnection(ConnectionString);
             connection.Open();
             string macID = MACID;
-            string query = $"create table if not exists gateway.{macID}_location (Id int(11) not null auto_increment, Name varchar(30) not null, DeviceId int(3) not null, MemoryAddress int(5) not null, DataType varchar(10) not null, LowLevel real, HighLevel real, Gain real not null, Offset real not null, Deadband real, State varchar(10) not null, primary key(Id));";
-            query += $"Create table if not exists gateway.{macID}_alarm (Id int(5) not null auto_increment, DateTime datetime not null, LocationName varchar(30) not null, Type varchar(20), Value real, LowLevel real, HighLevel real, Ack varchar(10), primary key(Id));";
-            query += $"Create table if not exists gateway.{macID}_data (Id int (11) not null auto_increment primary key, DateTime datetime not null, LocationId int(5), Value real);";
+            //string query = $"create table if not exists gateway.{macID}_location (Id int(11) not null auto_increment, Name varchar(30) not null, DeviceId int(3) not null, MemoryAddress int(5) not null, DataType varchar(10) not null, LowLevel real, HighLevel real, Gain real not null, Offset real not null, Deadband real, State varchar(10) not null, primary key(Id));";
+            //query += $"Create table if not exists gateway.{macID}_alarm (Id int(5) not null auto_increment, DateTime datetime not null, LocationName varchar(30) not null, Type varchar(20), Value real, LowLevel real, HighLevel real, Ack varchar(10), primary key(Id));";
+            //query += $"Create table if not exists gateway.{macID}_data (Id int (11) not null auto_increment primary key, DateTime datetime not null, LocationId int(5), Value real);";
+            string query = $@"
+                                CREATE TABLE IF NOT EXISTS gateway.{macID}_location (
+                                    Id INT(11) NOT NULL AUTO_INCREMENT,
+                                    Name VARCHAR(30) NOT NULL,
+                                    DeviceId INT(3) NOT NULL,
+                                    MemoryAddress INT(5) NOT NULL,
+                                    DataType VARCHAR(10) NOT NULL,
+                                    LowLevel REAL,
+                                    HighLevel REAL,
+                                    Gain REAL NOT NULL,
+                                    Offset REAL NOT NULL,
+                                    Deadband REAL,
+                                    State VARCHAR(10) NOT NULL,
+                                    PRIMARY KEY(Id)
+                                );
+
+                                CREATE TABLE IF NOT EXISTS gateway.{macID}_alarm (
+                                    Id INT(5) NOT NULL AUTO_INCREMENT,
+                                    DateTime DATETIME NOT NULL,
+                                    LocationName VARCHAR(30) NOT NULL,
+                                    Type VARCHAR(20),
+                                    Value REAL,
+                                    LowLevel REAL,
+                                    HighLevel REAL,
+                                    Ack VARCHAR(10),
+                                    PRIMARY KEY(Id)
+                                );
+
+                                CREATE TABLE IF NOT EXISTS gateway.{macID}_data (
+                                    Id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                    DateTime DATETIME NOT NULL,
+                                    LocationId INT(5),
+                                    Value REAL
+                                );
+
+                                CREATE TABLE IF NOT EXISTS gateway.{macID}_realtime (
+                                    Id INT(11) NOT NULL AUTO_INCREMENT,
+                                    DateTime DATETIME NOT NULL,
+                                    LocationId INT(5) NOT NULL,
+                                    LocationName VARCHAR(30) NOT NULL,
+                                    Value VARCHAR(30),
+                                    PRIMARY KEY(Id),
+                                    UNIQUE KEY(LocationId) -- cần thêm dòng này để ON DUPLICATE KEY UPDATE hoạt động
+                                );
+                            ";
+
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -1927,5 +1981,39 @@ namespace ATWebLogger.Core
             Buffer[Pos + 1] = (byte)(Value & 0x00FF);
         }
         #endregion
+
+        private void LogRealtime(Location location)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                {
+                    connection.Open();
+
+                    string query = $@"
+                                    INSERT INTO gateway.{RealtimeTableName} (DateTime, LocationId, LocationName, Value)
+                                    VALUES (@DateTime, @LocationId, @LocationName, @Value)
+                                    ON DUPLICATE KEY UPDATE
+                                        Value = VALUES(Value),
+                                        DateTime = VALUES(DateTime);
+                                ";
+
+                    var createAt = DateTime.Now;
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@DateTime", createAt);
+                        cmd.Parameters.AddWithValue("@LocationId", location.Id);
+                        cmd.Parameters.AddWithValue("@LocationName", location.Name);
+                        cmd.Parameters.AddWithValue("@Value", location.Status != "Bad" ? location.Value : location.Status);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    connection.Close();
+                }
+
+            }
+            catch { }
+        }
     }
 }

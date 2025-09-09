@@ -26,6 +26,7 @@ namespace CoreData
         public static string AlarmTableName { get; set; } = "alarm";
         public static string DataTableName { get; set; } = "data";
         public static string LocationTableName { get; set; } = "location";
+        public static string RealtimeTableName { get; set; } = "realtime";
     }
 }
 
